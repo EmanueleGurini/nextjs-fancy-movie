@@ -1,7 +1,9 @@
+import HeroComponent from "./components/HeroComponent/HeroComponent";
+
 export default function Home() {
   return (
     <main >
-      <h1>ciao, io sono home</h1>
+      <HeroComponent />
     </main>
   );
 }

@@ -9,7 +9,7 @@ import {
 } from "react-icons/io";
 import MovieCard from "../MovieCard/MovieCard";
 
-const Carousel = () => {
+const Carousel = ({ movies = [] }) => {
 	const carouselRef = useRef();
 	const movieCardRef = useRef();
 
@@ -45,22 +45,13 @@ const Carousel = () => {
 				/>
 			</div>
 			<div ref={carouselRef} className={styles.carousel}>
-				{/* {list.map((movie, index) => {
+				{movies.map((movie, index) => {
 					return (
-						<MovieCard
-							refProp={movieCardRef}
-							movie={movie}
-							key={index}
-						/>
+						<MovieCard key={index} refProp={movieCardRef} />
 					);
-				})} */}
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
-				<MovieCard refProp={movieCardRef} />
+
+
+				})}
 
 			</div>
 		</div>
